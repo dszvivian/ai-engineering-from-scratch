@@ -5,8 +5,9 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
-  <img src="https://img.shields.io/badge/Lessons-230+-purple" alt="230+ Lessons">
-  <img src="https://img.shields.io/badge/Phases-20-orange" alt="20 Phases">
+  <img src="https://img.shields.io/badge/Lessons-260+-D97757" alt="260+ Lessons">
+  <img src="https://img.shields.io/badge/Phases-20-191A23" alt="20 Phases">
+  <img src="https://img.shields.io/badge/Complete-60-3D8B6E" alt="60 Complete">
   <img src="https://img.shields.io/github/stars/rohitg00/ai-engineering-from-scratch?style=social" alt="GitHub Stars">
 </p>
 
@@ -21,7 +22,7 @@
 
 ---
 
-230+ hands-on lessons across 20 phases. From linear algebra to autonomous agent swarms. Python, TypeScript, Rust, Julia. Every lesson produces something reusable: prompts, skills, agents, MCP servers.
+260+ hands-on lessons across 20 phases. From linear algebra to autonomous agent swarms. Python, TypeScript, Rust, Julia. Every lesson produces something reusable: prompts, skills, agents, MCP servers.
 
 You learn AI. You build real things. You ship tools others can use.
 
@@ -123,9 +124,9 @@ You learn AI. You build real things. You ship tools others can use.
 | # | Lesson | Type | Lang |
 |:---:|--------|:----:|------|
 | 01 | [The Perceptron: Where It All Started](phases/03-deep-learning-core/01-the-perceptron/) | Build | Python |
-| 02 | Multi-Layer Networks & Forward Pass | Build | Python |
-| 03 | Backpropagation from Scratch | Build | Python |
-| 04 | Activation Functions: ReLU, Sigmoid, GELU & Why | Learn | Python |
+| 02 | [Multi-Layer Networks & Forward Pass](phases/03-deep-learning-core/02-multi-layer-networks/) | Build | Python |
+| 03 | [Backpropagation from Scratch](phases/03-deep-learning-core/03-backpropagation/) | Build | Python |
+| 04 | [Activation Functions: ReLU, Sigmoid, GELU & Why](phases/03-deep-learning-core/04-activation-functions/) | Build | Python |
 | 05 | Loss Functions: MSE, Cross-Entropy, Contrastive | Build | Python |
 | 06 | Optimizers -SGD, Momentum, Adam, AdamW | Build | Python |
 | 07 | Regularization -Dropout, Weight Decay, BatchNorm | Build | Python |
@@ -401,7 +402,7 @@ You learn AI. You build real things. You ship tools others can use.
 |:---:|--------|:----:|------|
 | 01 | [Why Multi-Agent](phases/16-multi-agent-and-swarms/01-why-multi-agent/) | Learn | -- |
 | 02 | Agent Teams: Roles & Delegation | Build | TS |
-| 03 | Communication Protocols | Build | TS, Rust |
+| 03 | [Communication Protocols](phases/16-multi-agent-and-swarms/03-communication-protocols/) | Build | TS |
 | 04 | Shared State & Coordination | Build | TS, Rust |
 | 05 | Message Passing & Mailboxes | Build | TS |
 | 06 | Task Markets | Build | TS |
