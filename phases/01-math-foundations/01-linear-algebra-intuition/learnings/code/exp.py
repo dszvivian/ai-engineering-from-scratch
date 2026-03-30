@@ -1,0 +1,1 @@
+print([a+b for a,b in (zip([1,2], [2,3]))])  
