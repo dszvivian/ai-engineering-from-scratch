@@ -20,14 +20,17 @@ class Vector:
 
     def cosine_similiarity(self, other):
         return self.dot(other) / (self.magnitude() * other.magnitude())
+    
+    def project_onto(self, other):
+        scalar = self.dot(other) / (other.dot(other))
+        return Vector([ scalar * x for x in other.components])    
 
     def __repr__(self) -> str:
         return f"Vector({self.components})"
-    
 
 if __name__ == "__main__":
-    veca = Vector([1,2,3])
-    vecb = Vector([4,5,6])
+    veca = Vector([3,4,0])
+    vecb = Vector([1,2,2])
     vecstd = Vector([1,1])
 
     print(veca + vecb)
@@ -37,4 +40,4 @@ if __name__ == "__main__":
     print(vecb.magnitude())
     print(vecstd.normalize())
     print(veca.cosine_similiarity(vecb))
-
+    print(f"ProjAonB = {veca.project_onto(vecb)}")

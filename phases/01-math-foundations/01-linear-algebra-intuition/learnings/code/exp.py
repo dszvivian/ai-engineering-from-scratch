@@ -1,1 +1,6 @@
-print([a+b for a,b in (zip([1,2], [2,3]))])  
+a = []
+
+a[0][2] = 22
+
+
+print(a) 
