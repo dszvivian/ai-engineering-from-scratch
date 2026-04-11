@@ -48,7 +48,19 @@ class Matrix:
         else:
             raise ValueError("incompatible Matrices: Columns of MatixA != Rows of MatrixB")
         
-        
+
+    def __sub__(self, other):
+        pass
+    
+    def __add__(self, other):
+        pass
+    
+    def determinant():
+        pass
+    
+    
+    
+
     def __repr__(self):
         return f"Matrix: ({self.component})"
     

@@ -1,6 +1,9 @@
 Vectors are used to store single part information
 Matrices are used to store group of information
 
+
+# Vectors:
+
 ## Dot Products.
 
 a.b = a * b * costheta,
@@ -46,8 +49,23 @@ Number of linearly independent columns = No of linearly independent ros.
 ## Projections:
 
 
-Projection is nothing but shodow of vector a onto vector b. It giomponent of a on direction of b.  
+Projection is nothing but shodow of vector a onto vector b. It is component of a on direction of b.  
 
 proj_b(a) = (a dot b / b dot b) * b  
 
+
+## Orthonormal vectors:
+
+process of converting vectors to Orthogonal + Normalized version.
+
+
+Normalized because it is easier t understand and plot normalized version of vectors.
+Orthogonal because otherwise two vectors might overlap in the same direction.
+We need them to be linearly independent.
+
+## Gram-shmidt process:
+
+
+
+# Matrix:
 
