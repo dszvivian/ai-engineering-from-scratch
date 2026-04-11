@@ -7,12 +7,13 @@
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
   <img src="https://img.shields.io/badge/Lessons-260+-D97757" alt="260+ Lessons">
   <img src="https://img.shields.io/badge/Phases-20-191A23" alt="20 Phases">
-  <img src="https://img.shields.io/badge/Complete-60-3D8B6E" alt="60 Complete">
+  <img src="https://img.shields.io/badge/Complete-96-3D8B6E" alt="96 Complete">
   <img src="https://img.shields.io/github/stars/rohitg00/ai-engineering-from-scratch?style=social" alt="GitHub Stars">
 </p>
 
 <p align="center">
   <a href="#the-journey">Journey</a> &bull;
+  <a href="#-ai-native-learning">AI-Native</a> &bull;
   <a href="#getting-started">Get Started</a> &bull;
   <a href="#course-output-the-toolkit">Toolkit</a> &bull;
   <a href="ROADMAP.md">Roadmap</a> &bull;
@@ -22,17 +23,59 @@
 
 ---
 
-260+ hands-on lessons across 20 phases. From linear algebra to autonomous agent swarms. Python, TypeScript, Rust, Julia. Every lesson produces something reusable: prompts, skills, agents, MCP servers.
+84% of students already use AI tools. Only 18% feel prepared to use them professionally. This course closes that gap.
 
-You learn AI. You build real things. You ship tools others can use.
+260+ lessons. 20 phases. ~290 hours. From linear algebra to autonomous agent swarms. Python, TypeScript, Rust, Julia. Every lesson produces something reusable -- prompts, skills, agents, MCP servers.
 
-| | Other Courses | This Course |
+You don't just learn AI. You learn AI **with** AI. Then you build real things. Then you ship tools others can use.
+
+| | Traditional Courses | This Course |
 |---|---|---|
 | **Scope** | One slice (NLP or Vision or Agents) | Everything: math, ML, DL, NLP, vision, speech, transformers, LLMs, agents, swarms |
 | **Languages** | Python only | Python, TypeScript, Rust, Julia |
-| **Output** | "I learned something" | A portfolio of tools, prompts, skills, and agents |
+| **Output** | "I learned something" | A portfolio of tools, prompts, skills, and agents you can install |
 | **Depth** | Surface-level or theory-heavy | Build from scratch first, then use frameworks |
-| **Format** | Videos or docs | Runnable code + notebooks + docs + web app |
+| **Format** | Videos you watch | Runnable code + docs + web app + AI-powered quizzes |
+| **Learning style** | Passive consumption | AI-native: use Claude Code skills to test yourself as you go |
+
+---
+
+## 🧠 AI-Native Learning
+
+This isn't a course you watch. It's a course you **use with your AI coding agent**.
+
+### Learn with AI, not just about AI
+
+```bash
+# Find where to start based on what you already know
+/find-your-level
+
+# Quiz yourself after completing a phase
+/check-understanding 3
+
+# Every lesson produces a reusable artifact
+ls phases/03-deep-learning-core/05-loss-functions/outputs/
+# prompt-loss-function-selector.md
+# prompt-loss-debugger.md
+```
+
+### Built-in Claude Code Skills
+
+| Skill | What it does |
+|-------|-------------|
+| `/find-your-level` | 10-question quiz that maps your knowledge to a starting phase and builds a personalized path with hour estimates |
+| `/check-understanding <phase>` | Per-phase quiz (8 questions) with feedback and specific lessons to review |
+
+### Every Lesson Ships Something
+
+Other courses end with "congratulations, you learned X." Our lessons end with a **reusable tool**:
+
+- **Prompts** -- paste into any AI assistant to get expert-level help on the topic
+- **Skills** -- install into Claude Code, Cursor, or any coding agent
+- **Agents** -- deploy as autonomous workers
+- **MCP servers** -- plug into any MCP-compatible AI app
+
+277-term searchable glossary. Full lesson catalog. ~290 hours of content with per-lesson time estimates. [Browse the website &rarr;](https://aiengineeringfromscratch.com)
 
 ---
 
@@ -127,15 +170,15 @@ You learn AI. You build real things. You ship tools others can use.
 | 02 | [Multi-Layer Networks & Forward Pass](phases/03-deep-learning-core/02-multi-layer-networks/) | Build | Python |
 | 03 | [Backpropagation from Scratch](phases/03-deep-learning-core/03-backpropagation/) | Build | Python |
 | 04 | [Activation Functions: ReLU, Sigmoid, GELU & Why](phases/03-deep-learning-core/04-activation-functions/) | Build | Python |
-| 05 | Loss Functions: MSE, Cross-Entropy, Contrastive | Build | Python |
-| 06 | Optimizers -SGD, Momentum, Adam, AdamW | Build | Python |
-| 07 | Regularization -Dropout, Weight Decay, BatchNorm | Build | Python |
-| 08 | Weight Initialization & Training Stability | Build | Python |
-| 09 | Learning Rate Schedules & Warmup | Build | Python |
-| 10 | Build Your Own Mini Framework | Build | Python |
-| 11 | Introduction to PyTorch | Build | Python |
-| 12 | Introduction to JAX | Build | Python |
-| 13 | Debugging Neural Networks | Learn | Python |
+| 05 | [Loss Functions: MSE, Cross-Entropy, Contrastive](phases/03-deep-learning-core/05-loss-functions/) | Build | Python |
+| 06 | [Optimizers: SGD, Momentum, Adam, AdamW](phases/03-deep-learning-core/06-optimizers/) | Build | Python |
+| 07 | [Regularization: Dropout, Weight Decay, BatchNorm](phases/03-deep-learning-core/07-regularization/) | Build | Python |
+| 08 | [Weight Initialization & Training Stability](phases/03-deep-learning-core/08-weight-initialization/) | Build | Python |
+| 09 | [Learning Rate Schedules & Warmup](phases/03-deep-learning-core/09-learning-rate-schedules/) | Build | Python |
+| 10 | [Build Your Own Mini Framework](phases/03-deep-learning-core/10-mini-framework/) | Build | Python |
+| 11 | [Introduction to PyTorch](phases/03-deep-learning-core/11-intro-to-pytorch/) | Build | Python |
+| 12 | [Introduction to JAX](phases/03-deep-learning-core/12-intro-to-jax/) | Build | Python |
+| 13 | [Debugging Neural Networks](phases/03-deep-learning-core/13-debugging-neural-networks/) | Build | Python |
 
 </details>
 
@@ -279,15 +322,15 @@ You learn AI. You build real things. You ship tools others can use.
 | # | Lesson | Type | Lang |
 |:---:|--------|:----:|------|
 | 01 | [Tokenizers: BPE, WordPiece, SentencePiece](phases/10-llms-from-scratch/01-tokenizers/) | Build | Python |
-| 02 | Building a Tokenizer from Scratch | Build | Python, Rust |
-| 03 | Data Pipelines for Pre-Training | Build | Python |
-| 04 | Pre-Training a Mini GPT (124M) | Build | Python |
-| 05 | Distributed Training, FSDP, DeepSpeed | Build | Python |
-| 06 | Instruction Tuning -SFT | Build | Python |
-| 07 | RLHF -Reward Model + PPO | Build | Python |
-| 08 | DPO -Direct Preference Optimization | Build | Python |
+| 02 | [Building a Tokenizer from Scratch](phases/10-llms-from-scratch/02-building-a-tokenizer/) | Build | Python |
+| 03 | [Data Pipelines for Pre-Training](phases/10-llms-from-scratch/03-data-pipelines/) | Build | Python |
+| 04 | [Pre-Training a Mini GPT (124M)](phases/10-llms-from-scratch/04-pre-training-mini-gpt/) | Build | Python |
+| 05 | [Distributed Training, FSDP, DeepSpeed](phases/10-llms-from-scratch/05-scaling-distributed/) | Build | Python |
+| 06 | [Instruction Tuning -SFT](phases/10-llms-from-scratch/06-instruction-tuning-sft/) | Build | Python |
+| 07 | [RLHF -Reward Model + PPO](phases/10-llms-from-scratch/07-rlhf/) | Build | Python |
+| 08 | [DPO -Direct Preference Optimization](phases/10-llms-from-scratch/08-dpo/) | Build | Python |
 | 09 | Constitutional AI | Build | Python |
-| 10 | Evaluation -Benchmarks, Evals | Build | Python |
+| 10 | [Evaluation -Benchmarks, Evals](phases/10-llms-from-scratch/10-evaluation/) | Build | Python |
 | 11 | Quantization: INT8, GPTQ, AWQ, GGUF | Build | Python, Rust |
 | 12 | Inference Optimization | Build | Python |
 | 13 | Building a Complete LLM Pipeline | Build | Python |
@@ -300,19 +343,19 @@ You learn AI. You build real things. You ship tools others can use.
 
 | # | Lesson | Type | Lang |
 |:---:|--------|:----:|------|
-| 01 | Prompt Engineering: Techniques & Patterns | Build | Python |
-| 02 | Few-Shot, CoT, Tree-of-Thought | Build | Python |
-| 03 | Structured Outputs | Build | Python, TS |
-| 04 | Embeddings & Vector Representations | Build | Python |
-| 05 | Vector Databases | Build | Python, TS |
-| 06 | RAG -Retrieval-Augmented Generation | Build | Python, TS |
-| 07 | Advanced RAG -Chunking, Reranking | Build | Python |
-| 08 | Fine-Tuning with LoRA & QLoRA | Build | Python |
-| 09 | Function Calling & Tool Use | Build | Python, TS |
-| 10 | Evaluation & Testing | Build | Python |
-| 11 | Caching, Rate Limiting & Cost | Build | Python, TS |
-| 12 | Guardrails & Safety | Build | Python |
-| 13 | Building a Production LLM App | Build | Python, TS |
+| 01 | [Prompt Engineering: Techniques & Patterns](phases/11-llm-engineering/01-prompt-engineering/) | Build | Python |
+| 02 | [Few-Shot, CoT, Tree-of-Thought](phases/11-llm-engineering/02-few-shot-cot/) | Build | Python |
+| 03 | [Structured Outputs](phases/11-llm-engineering/03-structured-outputs/) | Build | Python, TS |
+| 04 | [Embeddings & Vector Representations](phases/11-llm-engineering/04-embeddings/) | Build | Python |
+| 05 | [Context Engineering](phases/11-llm-engineering/05-context-engineering/) | Build | Python, TS |
+| 06 | [RAG: Retrieval-Augmented Generation](phases/11-llm-engineering/06-rag/) | Build | Python, TS |
+| 07 | [Advanced RAG: Chunking, Reranking](phases/11-llm-engineering/07-advanced-rag/) | Build | Python |
+| 08 | [Fine-Tuning with LoRA & QLoRA](phases/11-llm-engineering/08-fine-tuning-lora/) | Build | Python |
+| 09 | [Function Calling & Tool Use](phases/11-llm-engineering/09-function-calling/) | Build | Python |
+| 10 | [Evaluation & Testing](phases/11-llm-engineering/10-evaluation/) | Build | Python |
+| 11 | [Caching, Rate Limiting & Cost](phases/11-llm-engineering/11-caching-cost/) | Build | Python |
+| 12 | [Guardrails & Safety](phases/11-llm-engineering/12-guardrails/) | Build | Python |
+| 13 | [Building a Production LLM App](phases/11-llm-engineering/13-production-app/) | Build | Python |
 
 </details>
 
@@ -467,7 +510,9 @@ You learn AI. You build real things. You ship tools others can use.
 
 ## Course Output: The Toolkit
 
-Every lesson produces something reusable. By the end you have:
+Other courses give you a certificate. This one gives you a **toolkit**.
+
+Every lesson produces a reusable artifact -- a prompt, skill, agent, or MCP server that you can install and use immediately. By the end of the course you have:
 
 ```
 outputs/
@@ -477,7 +522,7 @@ outputs/
 └── mcp-servers/      MCP servers you built during the course
 ```
 
-Real tools. Install them with [SkillKit](https://github.com/rohitg00/skillkit), plug them into Claude Code, Cursor, or any AI agent.
+Install them with [SkillKit](https://github.com/rohitg00/skillkit). Plug them into Claude Code, Cursor, or any AI agent. These are real tools, not homework.
 
 ---
 
@@ -486,7 +531,6 @@ Real tools. Install them with [SkillKit](https://github.com/rohitg00/skillkit), 
 ```
 phases/XX-phase-name/NN-lesson-name/
 ├── code/           Runnable implementations (Python, TS, Rust, Julia)
-├── notebook/       Jupyter notebooks for experimentation
 ├── docs/
 │   └── en.md       Lesson documentation
 └── outputs/        Prompts, skills, agents produced by this lesson
@@ -494,30 +538,59 @@ phases/XX-phase-name/NN-lesson-name/
 
 Every lesson follows 6 steps:
 
-1. **Motto** - one-line core idea
-2. **Problem** - why this matters
-3. **Concept** - visual diagrams and intuition
-4. **Build It** - implement from scratch
-5. **Use It** - same thing with real frameworks
-6. **Ship It** - the prompt, skill, or agent this lesson produces
+| Step | What happens |
+|------|-------------|
+| **Motto** | One-line core idea that sticks |
+| **Problem** | A concrete scenario where not knowing this hurts |
+| **Concept** | Mermaid diagrams and intuition -- no code yet |
+| **Build It** | Implement from scratch in pure Python. No frameworks. |
+| **Use It** | Same thing with PyTorch, sklearn, or the real tool |
+| **Ship It** | The prompt, skill, or agent this lesson produces |
+
+The Build It / Use It split is the key. You understand what the framework does because you built it yourself first.
 
 ---
 
 ## Getting Started
 
+**Option A: Just start reading**
+
+Pick any completed lesson from [the website](https://aiengineeringfromscratch.com) or the phase tables below.
+
+**Option B: Clone and run**
+
 ```bash
 git clone https://github.com/rohitg00/ai-engineering-from-scratch.git
 cd ai-engineering-from-scratch
 
-python phases/00-setup-and-tooling/01-dev-environment/code/verify.py
-
 python phases/01-math-foundations/01-linear-algebra-intuition/code/vectors.py
 ```
+
+**Option C: Find your level (recommended)**
+
+If you already know some ML/DL, don't start from Phase 1. Use the built-in assessment:
+
+```bash
+# In Claude Code:
+/find-your-level
+```
+
+This 10-question quiz maps your knowledge to a starting phase and builds a personalized path with hour estimates.
 
 ### Prerequisites
 
 - You can write code (Python or any language)
-- You want to understand how AI actually works
+- You want to understand how AI actually works, not just call APIs
+
+### Who This Is For
+
+| You are... | Start at... | Time to complete |
+|-----------|------------|-----------------|
+| New to programming + AI | Phase 0 (Setup) | ~290 hours |
+| Know Python, new to ML | Phase 1 (Math) | ~270 hours |
+| Know ML, new to DL | Phase 3 (Deep Learning) | ~200 hours |
+| Know DL, want LLMs/agents | Phase 10 (LLMs from Scratch) | ~100 hours |
+| Senior engineer, want agents only | Phase 14 (Agent Engineering) | ~60 hours |
 
 ---
 
@@ -527,7 +600,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add lessons, translations, and
 
 Want to fork this for your team or school? See [FORKING.md](FORKING.md).
 
-See [ROADMAP.md](ROADMAP.md) for progress tracking.
+See [ROADMAP.md](ROADMAP.md) for progress tracking (~290 hours, per-lesson time estimates).
 
 ---
 

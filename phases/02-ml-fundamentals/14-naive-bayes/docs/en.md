@@ -7,6 +7,13 @@
 **Prerequisites:** Phase 2, Lessons 01-07 (classification, Bayes' theorem)
 **Time:** ~75 minutes
 
+## Learning Objectives
+
+- Implement Multinomial Naive Bayes from scratch with Laplace smoothing for text classification
+- Explain why the naive independence assumption is mathematically wrong but produces correct class rankings in practice
+- Compare Multinomial, Bernoulli, and Gaussian Naive Bayes variants and select the right one for a given feature type
+- Evaluate Naive Bayes against logistic regression on high-dimensional sparse data and explain the bias-variance tradeoff at work
+
 ## The Problem
 
 You need to classify text. Emails into spam or not-spam. Customer reviews into positive or negative. Support tickets into categories. You have thousands of features (one per word) and limited training data.
@@ -93,7 +100,7 @@ log P(not-spam | email) = log(0.6) + 2*log(0.051) + 1*log(0.093) + 0*log(0.856)
                         = -8.838
 ```
 
-Spam wins by a large margin. The word "free" appearing twice is strong evidence for spam, and "meeting" not appearing removes evidence for not-spam.
+Spam wins by a large margin. The word "free" appearing twice is strong evidence for spam. Note that "meeting" not appearing contributes zero to both log sums (0 * log(P)) -- in Multinomial NB, absent words have no effect. It is Bernoulli NB that explicitly models word absence.
 
 ### Three Variants
 

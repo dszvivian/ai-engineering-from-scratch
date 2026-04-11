@@ -7,6 +7,13 @@
 **Prerequisites:** Lesson 03.03 (Backpropagation)
 **Time:** ~75 minutes
 
+## Learning Objectives
+
+- Implement sigmoid, tanh, ReLU, Leaky ReLU, GELU, Swish, and softmax with their derivatives from scratch
+- Diagnose the vanishing gradient problem by measuring activation magnitudes through 10+ layers with different activations
+- Detect dead neurons in a ReLU network and explain why GELU avoids this failure mode
+- Select the correct activation function for a given architecture (transformer, CNN, RNN, output layer)
+
 ## The Problem
 
 Stack two linear transformations: y = W2(W1x + b1) + b2. Expand it: y = W2W1x + W2b1 + b2. That's just y = Ax + c -- a single linear transformation. No matter how many linear layers you stack, the result collapses to one matrix multiply. Your 100-layer network has the same representational power as a single layer.
@@ -19,7 +26,9 @@ Activation functions break the linearity. They warp the output of each layer thr
 
 ### Why Nonlinearity Is Necessary
 
-Here is the proof that stacked linear layers collapse. A linear layer computes f(x) = Wx + b. Stack two:
+Matrix multiplication is composable. Multiplying a vector by matrix A then matrix B is identical to multiplying by AB. This means stacking ten linear layers is mathematically equivalent to one linear layer with one big matrix. All those parameters, all that depth -- wasted. You need something to break the chain. That's what activation functions do.
+
+Here is the proof. A linear layer computes f(x) = Wx + b. Stack two:
 
 ```
 Layer 1: h = W1 * x + b1
@@ -34,7 +43,7 @@ y = (W2 * W1) * x + (W2 * b1 + b2)
 y = A * x + c
 ```
 
-One layer. All that depth, wasted. Insert a nonlinear activation g() between layers:
+One layer. Insert a nonlinear activation g() between layers:
 
 ```
 h = g(W1 * x + b1)
@@ -89,7 +98,7 @@ Maximum derivative is 1.0 at x = 0 -- four times better than sigmoid. But the va
 
 ### ReLU: The Breakthrough
 
-Rectified Linear Unit. Published by Nair and Hinton in 2010, it changed everything.
+Rectified Linear Unit. Popularized for deep learning by Nair and Hinton in 2010 (the function itself dates to Fukushima's 1969 work), it changed everything.
 
 ```
 relu(x) = max(0, x)
@@ -140,6 +149,8 @@ Self-gated activation discovered by Ramachandran et al. in 2017 through automate
 ```
 swish(x) = x * sigmoid(x)
 ```
+
+Swish is formally x * sigmoid(x). Google discovered it through automated search over activation function space -- a neural network designing parts of neural networks.
 
 Like GELU, it is smooth, non-monotonic, and allows small negative values. The difference is subtle: Swish uses sigmoid for gating while GELU uses the Gaussian CDF. In practice, performance is nearly identical. Swish is used in EfficientNet and some vision models. GELU dominates in language models.
 
@@ -474,13 +485,9 @@ model = nn.Sequential(
 )
 ```
 
-The rules in practice:
+Hidden layers in a transformer: GELU. Hidden layers in a CNN: ReLU. Output layer for classification: softmax. Output layer for regression: none (linear). Output layer for probabilities: sigmoid. That's it. Start with these defaults. Change them only when you have evidence.
 
-- **Transformers**: GELU everywhere. GPT, BERT, ViT all use it.
-- **CNNs**: ReLU is still the default. Swish in newer architectures like EfficientNet.
-- **RNNs/LSTMs**: Tanh for hidden state, sigmoid for gates.
-- **Output layer**: Sigmoid for binary, softmax for multi-class, linear for regression.
-- **If neurons are dying**: Switch from ReLU to Leaky ReLU or GELU.
+RNNs and LSTMs use tanh for hidden state and sigmoid for gates, but if you're building from scratch today, you're probably not using RNNs. If neurons are dying in your ReLU network, switch to GELU. Don't reach for Leaky ReLU unless you have a specific reason -- GELU solves the dead neuron problem and gives better gradient flow.
 
 ## Ship It
 
